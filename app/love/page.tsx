@@ -38,7 +38,7 @@ function ImageParallax({ id }: { id: number | string }) {
   );
 }
 
-const Home = ({ id }: { id: number[] }) => {
+const Home = () => {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
