@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-const page = () => {
+const Home = () => {
   const router = useRouter();
   useEffect(() => {
     setTimeout(() => {
@@ -51,4 +51,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Home;

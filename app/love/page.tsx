@@ -38,7 +38,7 @@ function ImageParallax({ id }: { id: number | string }) {
   );
 }
 
-const page = ({ id }: { id: number[] }) => {
+const Home = ({ id }: { id: number[] }) => {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -60,11 +60,11 @@ const page = ({ id }: { id: number[] }) => {
         75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92,
         93, 94, 95, 96, 97, 98, 99, 100, 101,
       ].map((image) => (
-        <ImageParallax id={image} />
+        <ImageParallax id={image} key={image}/>
       ))}
       <motion.div className='progress' style={{ scaleX }} />
     </section>
   );
 };
 
-export default page;
+export default Home;
